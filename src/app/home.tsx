@@ -11,6 +11,7 @@ import Place from "@/model/place"
 // assets
 import lp from "@/assets/loading.json"
 import ep from "@/assets/error.json"
+import Footer from "@/components/footer";
 
 const Home = () => {
 
@@ -35,15 +36,18 @@ const Home = () => {
 
     return (
         <div className="container">
-            <PlaceForm onSubmit={handleQuerySubmit} />
-            <div className="data">
-                <h2 className="data-header"> Your Top Choices: </h2>
-                <div className="data-content">
-                    {places && places.map((place) => (
-                        <PlaceDetails key={place.id} place={place}/>
-                    ))}
+            <div className="main">
+                <PlaceForm onSubmit={handleQuerySubmit} />
+                <div className="data">
+                    <h2 className="data-header"> Your Top Choices: </h2>
+                    <div className="data-content">
+                        {places && places.map((place) => (
+                            <PlaceDetails key={place.id} place={place}/>
+                        ))}
+                    </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
