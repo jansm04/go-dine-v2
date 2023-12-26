@@ -1,7 +1,10 @@
 import Link from "next/link"
 import Place from "@/model/place"
 
-const PlaceDetails = ({ place } : { place: Place }) => {
+const PlaceDetails = ({ key, place } : { 
+    key: string, 
+    place: Place 
+}) => {
 
     if (place && place.id === "loading") {
         return (

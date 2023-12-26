@@ -68,7 +68,7 @@ const PlaceForm = ({
                     <label>City</label>
                     <select value={city} className="form-select" onChange={handleCitySelect}>
                         {cities.map(c => (
-                            <option>{c}</option>
+                            <option key={c}>{c}</option>
                         ))}
                     </select>
                 </div>
@@ -76,7 +76,7 @@ const PlaceForm = ({
                     <label>Cuisine</label>
                     <select value={type} className="form-select" onChange={handleTypeSelect}>
                         {types.map(t => (
-                            <option>{t}</option>
+                            <option key={t}>{t}</option>
                         ))}
                     </select>
                 </div>
@@ -84,7 +84,7 @@ const PlaceForm = ({
                     <label>Mood</label>
                     <select value={mood} className="form-select" onChange={handleMoodSelect}>
                         {moods.map(m => (
-                            <option>{m}</option>
+                            <option key={m}>{m}</option>
                         ))}
                     </select>
                 </div>

@@ -40,7 +40,7 @@ const Home = () => {
                 <h2 className="data-header"> Your Top Choices: </h2>
                 <div className="data-content">
                     {places && places.map((place) => (
-                        <PlaceDetails place={place}/>
+                        <PlaceDetails key={place.id} place={place}/>
                     ))}
                 </div>
             </div>
