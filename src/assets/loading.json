@@ -1,0 +1,15 @@
+{
+    "id": "loading",
+    "formattedAddress": "",
+    "location": {
+        "longitude": 0,
+        "latitude": 0
+    },
+    "rating": 0,
+    "websiteUri": "",
+    "priceLevel": "",
+    "displayName": {
+        "text": "finding your next dinner...",
+        "languageCode": ""
+    }
+}
