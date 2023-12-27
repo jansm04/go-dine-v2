@@ -2,9 +2,13 @@ import Link from "next/link"
 
 const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="signature">
-                Created by {<Link className="gh-link" href='https://github.com/jansm04'>Jan S.</Link>} in November 2023
+        <footer className="p-2 fixed h-fit w-[100%] left-0 bottom-0 text-center text-black sm:relative sm:bg-slate-200">
+            <div>
+                Made by 
+                    {<Link href='https://github.com/jansm04'>
+                        <div className="text-indigo-700 inline"> Jan S. </div>
+                    </Link>} 
+                in November 2023
             </div>
         </footer>
     )

@@ -1,4 +1,4 @@
-import { ChangeEvent, ChangeEventHandler, FormEvent, useState } from "react"
+import { ChangeEvent, FormEvent, useState } from "react"
 
 import Navbar from './navbar';
 
@@ -60,35 +60,38 @@ const PlaceForm = ({
     }
 
     return (
-        <div className="res-form">
+        <div className="bg-[#171716] p-4 sm:w-[100%]">
             <Navbar />
-            <form className="form" onSubmit={handleSubmit}>
-                <h2 className="search-header">What are you craving?</h2>
-                <div className="city-type">
-                    <label>City</label>
-                    <select value={city} className="form-select" onChange={handleCitySelect}>
+            <form className="pr-2.5 mt-[33%] text-center sm:mt-[60px]" onSubmit={handleSubmit}>
+                <h2 className="mb-10 font-bold text-2xl text-[#ddd3a1] sm:mb-10 sm:text-[28px]">What are you feeling?</h2>
+                <div className="mb-2.5 sm:mb-4">
+                    <label className="mr-1 text-lg italic font-bold text-[#ddd3a1] sm:text-[20px]">City</label>
+                    <select value={city} className="inline text-black p-2.5 text-[15px] ml-2 rounded cursor-pointer sm:text-[18px]" onChange={handleCitySelect}>
                         {cities.map(c => (
                             <option key={c}>{c}</option>
                         ))}
                     </select>
                 </div>
-                <div className="cuisine-type">
-                    <label>Cuisine</label>
-                    <select value={type} className="form-select" onChange={handleTypeSelect}>
+                <div className="mb-2.5 sm:mb-4">
+                    <label className="mr-1 text-lg italic font-bold text-[#ddd3a1] sm:text-[20px]">Cuisine</label>
+                    <select value={type} className="inline text-black p-2.5 text-[15px] ml-2 rounded cursor-pointer sm:text-[18px]" onChange={handleTypeSelect}>
                         {types.map(t => (
                             <option key={t}>{t}</option>
                         ))}
                     </select>
                 </div>
-                <div className="mood-type">
-                    <label>Mood</label>
-                    <select value={mood} className="form-select" onChange={handleMoodSelect}>
+                <div className="mb-2.5 sm:mb-4">
+                    <label className="mr-1 text-lg italic font-bold text-[#ddd3a1] sm:text-[20px]">Mood</label>
+                    <select value={mood} className="inline text-black p-2.5 text-[15px] ml-2 rounded cursor-pointer sm:text-[18px]" onChange={handleMoodSelect}>
                         {moods.map(m => (
                             <option key={m}>{m}</option>
                         ))}
                     </select>
                 </div>
-                <button>Find</button>
+                <button className="mt-10 w-[50%] py-1 px-5 text-[15px] italic font-bold text-center cursor-pointer 
+                rounded text-black bg-[#ddd3a1] hover:bg-[#bdb176] sm:mb-[45px] sm:w-[40%] sm:h-[50px] sm:text-lg">
+                    Find
+                </button>
             </form>
         </div>
     )
