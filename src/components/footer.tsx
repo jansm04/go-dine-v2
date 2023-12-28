@@ -8,7 +8,7 @@ const Footer = () => {
                     {<Link href='https://github.com/jansm04'>
                         <div className="text-indigo-700 inline"> Jan S. </div>
                     </Link>} 
-                in November 2023
+                in December 2023
             </div>
         </footer>
     )

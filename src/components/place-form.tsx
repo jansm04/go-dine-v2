@@ -62,7 +62,7 @@ const PlaceForm = ({
     return (
         <div className="bg-[#171716] p-4 sm:w-[100%]">
             <Navbar />
-            <form className="pr-2.5 mt-[30%] text-center sm:mt-[60px]" onSubmit={handleSubmit}>
+            <form className="pr-2.5 mt-[28%] text-center sm:mt-[60px]" onSubmit={handleSubmit}>
                 <h2 className="mb-10 font-bold text-2xl text-[#ddd3a1] sm:mb-10 sm:text-[28px]">What are you feeling?</h2>
                 <div className="mb-2.5 sm:mb-4">
                     <label className="mr-1 text-lg italic font-bold text-[#ddd3a1] sm:text-[20px]">City</label>
@@ -90,7 +90,7 @@ const PlaceForm = ({
                 </div>
                 <button className="mt-10 w-[50%] py-1 px-5 text-[15px] italic font-bold text-center cursor-pointer 
                 rounded text-black bg-[#ddd3a1] hover:bg-[#bdb176] sm:mb-[45px] sm:w-[40%] sm:h-[50px] sm:text-lg">
-                    Generate
+                    Generate Options
                 </button>
             </form>
         </div>

@@ -38,7 +38,7 @@ const Home = () => {
         <div>
             <div className="grid grid-cols-3 min-h-screen sm:block">
                 <PlaceForm onSubmit={handleQuerySubmit} />
-                <div className="p-20 bg-slate-200 col-span-2 sm:py-20 sm:px-12 sm:h-[100%] sm:max-h-fit sm:min-h-[50%]">
+                <div className="p-20 bg-slate-200 col-span-2 sm:py-20 sm:px-8 sm:h-[100%] sm:max-h-fit sm:min-h-[50%]">
                     <h2 className="text-[#3a3c3d] mt-10 mb-[60px] font-bold text-xl sm:mt-0 sm:text-3xl"> Your Top Choices: </h2>
                     <div className="mb-[12%] sm:mb-12">
                         {places && places.map((place) => (
