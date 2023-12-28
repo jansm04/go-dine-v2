@@ -4,6 +4,7 @@ import { useState } from "react"
 // components
 import PlaceForm from "@/components/place-form"
 import PlaceDetails from "@/components/place-details"
+import Footer from "@/components/footer";
 
 // interfaces
 import Place from "@/interfaces/place"
@@ -11,7 +12,8 @@ import Place from "@/interfaces/place"
 // assets
 import lp from "@/assets/loading.json"
 import ep from "@/assets/error.json"
-import Footer from "@/components/footer";
+
+const BACKEND_SERVER = process.env.NEXT_PUBLIC_BACKEND_SERVER
 
 const Home = () => {
 
@@ -22,7 +24,7 @@ const Home = () => {
 
         // fetch array of restaurants from OpenAI API
         const fetchRestaurants = async () => {
-            const response = await fetch(`https://go-dine.vercel.app/api/call?city=${city}&type=${type}&mood=${mood}`)
+            const response = await fetch(`${BACKEND_SERVER}/api/call?city=${city}&type=${type}&mood=${mood}`)
             if (response.ok) {
                 const json = await response.json()
                 setPlaces(json)
