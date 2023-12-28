@@ -5,25 +5,24 @@ const { locations, provinces } = require('./maps');
 
 const callAPI = async (city: string, type: string, mood: string) => {
     try {
-        const ai_response = await openai.chat.completions.create({
-          model: "gpt-3.5-turbo",
-          messages: [{
-              "role": "user", 
-              // PROMPT: asks for list of restaurant names ready to be parsed
-              "content": `Print one line of text consisting of the 4 best ${mood} ${type} restaurants in ${city}, Canada. 
-                          Include names ONLY, each separated by a '#' symbol.`,
-          }]
-        });
-        // create array of restaurant names
         var count = 0;
         while (true) {
+          const ai_response = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo",
+            messages: [{
+                "role": "user", 
+                // PROMPT: asks for list of restaurant names ready to be parsed
+                "content": `Print one line of text consisting of the 4 best ${mood} ${type} restaurants in ${city}, Canada. 
+                            Include names ONLY, each separated by a '#' symbol.`,
+            }]
+          });
+          // create array of restaurant names
           const text = ai_response.choices[0].message.content;
-          console.log("AI Response: " + text);
+          console.log(`AI Response #${count+1}: ${text}`);
           var words = text.split('#');
-          console.log(`Attempt ${count}: ${words}`);
           if (words.length == 4) 
             break;
-          if (count++ == 5) {
+          if (count++ == 10) {
             console.log("Error: failed to parse AI reponse string.");
             return [{
               id: 'error',
