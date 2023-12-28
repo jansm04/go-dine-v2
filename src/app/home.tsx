@@ -22,7 +22,7 @@ const Home = () => {
 
         // fetch array of restaurants from OpenAI API
         const fetchRestaurants = async () => {
-            const response = await fetch(`http://localhost:3000/api/call?city=${city}&type=${type}&mood=${mood}`)
+            const response = await fetch(`https://go-dine.vercel.app/api/call?city=${city}&type=${type}&mood=${mood}`)
             if (response.ok) {
                 const json = await response.json()
                 setPlaces(json)

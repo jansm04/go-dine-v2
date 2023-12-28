@@ -90,7 +90,7 @@ const PlaceForm = ({
                 </div>
                 <button className="mt-10 w-[50%] py-1 px-5 text-[15px] italic font-bold text-center cursor-pointer 
                 rounded text-black bg-[#ddd3a1] hover:bg-[#bdb176] sm:mb-[45px] sm:w-[40%] sm:h-[50px] sm:text-lg">
-                    Find
+                    Generate
                 </button>
             </form>
         </div>
