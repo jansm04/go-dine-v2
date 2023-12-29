@@ -13,8 +13,6 @@ import Place from "@/interfaces/place"
 import lp from "@/assets/loading.json"
 import ep from "@/assets/error.json"
 
-const BACKEND_SERVER = process.env.NEXT_PUBLIC_BACKEND_SERVER
-
 const Home = () => {
 
     const [places, setPlaces] = useState<Place[]>([])
