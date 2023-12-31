@@ -1,5 +1,11 @@
 Ever wanted to go out to eat somewhere new, but had no idea where to go? goDine is a simple restaurant generator application that takes a few user inputs about what you're looking for and outputs a few great options for places to eat. Check it out [here](https://godine.vercel.app).
 
+## UI
+
+An example of a search:
+
+![godine-ui](https://github.com/jansm04/goDine-v2/assets/124746110/350753e9-d4b6-438b-9b2b-02a26fce9140)
+
 
 ## Getting Started
 
