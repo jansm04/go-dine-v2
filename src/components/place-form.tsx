@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react"
 
-import Navbar from './navbar';
+import Header from './header';
 
 const PlaceForm = ({ 
     onSubmit 
@@ -61,7 +61,7 @@ const PlaceForm = ({
 
     return (
         <div className="bg-[#171716] p-4 sm:w-[100%]">
-            <Navbar />
+            <Header />
             <form className="pr-2.5 mt-[28%] text-center sm:mt-[60px]" onSubmit={handleSubmit}>
                 <h2 className="mb-10 font-bold text-2xl text-[#ddd3a1] sm:mb-10 sm:text-[28px]">What are you feeling?</h2>
                 <div className="mb-2.5 sm:mb-4">
