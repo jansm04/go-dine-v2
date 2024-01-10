@@ -6,9 +6,9 @@ const Footer = () => {
             <div>
                 Made by 
                     {<Link href='https://github.com/jansm04' target="_blank">
-                        <div className="text-indigo-700 inline"> Jan S. </div>
+                        <div className="text-indigo-700 inline"> @jansm04 </div>
                     </Link>} 
-                in December 2023
+                in 2023
             </div>
         </footer>
     )
