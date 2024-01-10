@@ -4,7 +4,7 @@ Ever wanted to go out to eat somewhere new, but had no idea where to go? goDine 
 
 An example of a search:
 
-![godine-ui](https://github.com/jansm04/goDine-v2/assets/124746110/350753e9-d4b6-438b-9b2b-02a26fce9140)
+![go-dine-ui](https://github.com/jansm04/goDine-v2/assets/124746110/cbfe7254-3a0c-4578-b800-11f9df0c715f)
 
 
 ## Getting Started
