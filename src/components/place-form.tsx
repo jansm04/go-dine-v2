@@ -63,7 +63,7 @@ const PlaceForm = ({
         <div className="bg-[#171716] p-4 sm:w-[100%]">
             <Header />
             <form className="pr-2.5 mt-[28%] text-center sm:mt-[60px]" onSubmit={handleSubmit}>
-                <h2 className="mb-10 font-bold text-2xl text-[#ddd3a1] sm:mb-10 sm:text-[28px]">What are you feeling?</h2>
+                <h2 className="mb-10 font-bold text-2xl text-[#ddd3a1] sm:mb-10 sm:text-[28px]">What are you looking for?</h2>
                 <div className="mb-2.5 sm:mb-4">
                     <label className="mr-1 text-lg italic font-bold text-[#ddd3a1] sm:text-[20px]">City</label>
                     <select value={city} className="inline text-black p-2.5 text-[15px] ml-2 rounded cursor-pointer sm:text-[18px]" onChange={handleCitySelect}>

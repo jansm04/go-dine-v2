@@ -8,7 +8,7 @@ const Navbar = () => {
                     goDine
                 </h1>
                 <p className='text-center text-sm text-[#b7ad7a] py-3 px-10 sm:text-base'>
-                    For all the times you want to eat out but have no idea where to go.
+                    Generate places to eat in major Canadian cities based on cuisine and price.
                 </p>
             </div>
         </header>
