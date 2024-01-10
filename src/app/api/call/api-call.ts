@@ -1,5 +1,7 @@
+import Place from "@/interfaces/place";
 import openai from "./openai";
 import requestHeaders from "./place-headers";
+import ep from "@/objects/error"
 
 const { locations, provinces } = require('./maps');
 
@@ -24,10 +26,7 @@ const callAPI = async (city: string, type: string, mood: string) => {
             break;
           if (count++ == 10) {
             console.log("Error: failed to parse AI reponse string.");
-            return [{
-              id: 'error',
-              displayName: { text: 'A problem occurred while fetching the response. Please try again.', languageCode: 'en' }
-            }];
+            return [ep];
           }
         }
       
@@ -76,7 +75,7 @@ const callAPI = async (city: string, type: string, mood: string) => {
           } 
         }
         if (places_set.size > 0) {
-          var places_array = new Array<string>();
+          var places_array = new Array<Place>();
           places_set.forEach((place) => {
             places_array.push(JSON.parse(place));
           })
@@ -84,17 +83,11 @@ const callAPI = async (city: string, type: string, mood: string) => {
           return places_array;
         }
         else {
-          return [{
-            id: 'error',
-            displayName: { text: 'Could not find any results this time. Please try again.', languageCode: 'en' }
-          }];
+          return [ep];
         }
-    } catch (error) {
-        console.log(error);
-        return [{
-          id: 'error',
-          displayName: { text: 'A problem occurred while fetching the response. Please try again.', languageCode: 'en' }
-        }];
+    } catch (err) {
+        console.log(err);
+        return [ep];
     }    
 }
 
